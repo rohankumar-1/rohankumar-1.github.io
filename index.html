@@ -1,27 +1,229 @@
 <!DOCTYPE html>
 
-<html>
+
+<!-- 
+    
+    Things to do:
+    -headshot
+    -back to top bar
+    -add text to table
+    -add text to about me
+    -fix gradient
+    -add contact me form or email link
+    -scavenger hunt
+    -shadow effect to each project
+        -2 per row, round edges maybe (Zuizz has same should we copy?)
+        -text and subtext when hovering
+        -try minimal images?
+        -MINIMIZE TEXT: what i learned, skills, one sentence overview, github link
+
+-->
+<html lang="en">
+
     <head>
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="style_index.css">
-        <title> Rohan's Site </title>
+        <script src="https://kit.fontawesome.com/1b379fe8f1.js" crossorigin="anonymous"></script>
+        <link rel="icon" type="image/x-icon" href="resources/resume/favicon.png">
+        <title> Rohan Kumar </title>
     </head>
 
     <body>
+
+        <a id="topanchor" name="top"></a>
+
+        <div class="progress-bar"></div>
+        <script src="javascript/progressbar.js"></script>
+
+        <button id="myBtn"><a href="#top"><i class="fa-solid fa-arrow-up fa-2x"></i></a></button>
+        <script src="javascript/upbutton.js"></script>
+
+        <!-- below is the navigation bar, still need to fix links, and add CSS to these parts to make buttons along top right or bottom of screen-->
         <div>
-            <h1>
-                Rohan Kumar
-            </h1>
-            <p>
-                This website contains all of the information about me, including personal projects, links to all of my social media accounts and
-                portfolios, and general information.
-            </p>
+            <nav class = "navMenu">
+                <a href= #break1_under>About</a> 
+                <a href= #break2_under>Projects</a>
+                <a href= #break3_under>Contact Me</a>
+                <div class="dot"></div>
+            </nav>
         </div>
 
-        <div>
+        <div id="about_me">
+            <div class="aboutme_container">
+                <h1 class="aboutme_nameblock">Hi, I'm Rohan Kumar</h1>
+                <p class="aboutme_firstblock">I am a full time student at Boston University, currently a sophomore studying computer engineering and computer science.</p>
+                <p class="aboutme_firstblock">My <b>resume</b> can be found <b><a href="resources/resume/Resume October 2022.pdf" target="_blank">here</a></b>.</p>
+            </div>
+
+            <div class="social_linkbar">
+                <div class="contsocial">
+                    <a href="https://www.linkedin.com/in/rohan-kumar-b37521229/" target ="_blank">
+                        <i class="fa fa-brands fa-linkedin-square fa-3x"></i>
+                    </a>
+                    <div>LinkedIn</div>
+                </div>
+                <div class="contsocial">
+                    <a href="resources/resume/Resume October 2022.pdf" target="_blank">
+                        <i class="fa fa-solid fa-square-share-nodes fa-3x"></i>
+                    </a>
+                    <div>Resume <br>(again)</div>
+                </div>
+                <div class="contsocial">
+                    <a href="https://github.com/rohankumar-1/" target ="_blank">
+                        <i class="fa fa-brands fa-github-square fa-3x"></i>
+                    </a>
+                    <div>Github</div>
+                </div>
+            </div>
+            <p id="break1"></p>
+            <p id="break1_under"></p>
+            
+
+            <div id="skills_info">
+
+                <h1 id="about_header">About Me</h1>
+                <!--First Column-->
+                <div class="info_column column1">
+                    <div id="skills_header"><u>Skills</u></div>
+                    <p class="info_text">version control (Github)<br>
+                                        Command Line<br>
+                                        Arduino IDE<br>
+                                        computer-aided design<br>
+                                        logic design<br>
+                                        advanced math<br>
+                                        Microsoft/Google Products<br>
+                                        </p>
+                </div>
+                
+                <!--Second Column-->
+                <div class="info_column column2">
+                    <div id="activity_header"><u>Activities</u></div>
+                    <p class="info_text">Futbal (soccer)<br>
+                                        violin<br>
+                                        FIRST Robotics<br>
+                                        
+                                        </p>
+                </div>
+
+                <!--Third Column-->
+                <div class="info_column column3">
+                    <div id="location_header"><u>Location</u></div>
+                    <p class="info_text">Boston, MA <br> Hartford, CT</p>
+                    <div id="language_header"><u>Spoken Languages</u></div>
+                    <p class="info_text">English (fluent) <br> French (proficient)</p>
+                </div>
+
+            </div>
+
+            <div class="iconList_container">
+                <ul class="iconList">
+                    
+                    <li id="python_img">
+                        <div class="conticon">
+                            <img height="80px" width="80px" src="resources/languageIcons/python_icon.png">
+                            <div>Python</div>
+                        </div>
+                    </li>
+                    <li id="java_img">
+                        <div class="conticon">
+                            <img height="80px" width="80px" src="resources/languageIcons/java_icon.png">
+                            <div>Java</div>
+                        </div>
+                    </li>
+                    <li id="matlab_img">
+                        <div class="conticon"> 
+                            <img height="80px" width="80px" src="resources/languageIcons/matlab_icon.png">
+                            <div>Matlab</div>
+                        </div>
+                    </li>
+                    <li id="html_img">
+                        <div class="conticon"> 
+                            <img height="80px" width="80px" src="resources/languageIcons/html_icon.png">
+                            <div>HTML5</div>
+                        </div>
+                    </li>
+                    <li id="css_img">
+                        <div class="conticon"> 
+                            <img height="80px" width="80px" src="resources/languageIcons/css_icon.png">
+                            <div>CSS</div>
+                        </div>
+                    </li>
+                    <li id="verilog_img">
+                        <div class="conticon"> 
+                            <img height="80px" width="80px" src="resources/languageIcons/verilog_icon.png"> 
+                            <div>Verilog</div>
+                        </div>
+                    </li>
+                    <li id="autocad_img"> 
+                        <div class="conticon"> 
+                            <img height="80px" width="80px" src="resources/languageIcons/autocad_icon.png"> 
+                            <div>AutoCAD</div>
+                        </div>
+                    </li>
+                    <li id="onshape_img">
+                        <div class="conticon"> 
+                            <img height="80px" width="80px" src="resources/languageIcons/onshape_icon.png">
+                            <div>OnShape</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
             
         </div>
-        
+
+        <p id="break2"></p>
+        <p id="break2_under"></p>
+
+        <div id="projects">
+
+            <h1 id="project_header">My Projects</h1>
+
+            <div class="all_project_container">
+                <div class="first_row">
+                    <div class="pr_container">
+                        <img height="300px" width="350px" src="resources/languageIcons/connect4_image.png">
+                        <div>Text Bla Bla</div>
+                    </div>
+                    <div class="pr_container">
+                        <img height="300px" width="350px" src="resources/languageIcons/connect4_image.png">
+                        <div>More Text</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p id="break3"></p>
+        <p id="break3_under"></p>
+
+        <div id="contact">
+
+            <h1 id="contact_header"><br><br>Contact Me</h1>
+
+            <div class="contact_info">
+
+                <p><br><br>Email: roku@bu.edu</p>
+                <p>Phone: (860)-929-9772<br><br></p>
+            </div>
+
+            <form id="form" class="topBefore" action="https://formsubmit.co/roku@bu.edu" method="POST">
+		
+                <input id="name" type="text" placeholder="Name" required>
+                <input id="email" type="text" placeholder="Email" required>
+                <textarea id="message" type="text" placeholder="Message or Inquiry"></textarea>
+                <input id="submit" type="submit" value="SUBMIT">
+    
+            </form>
+
+        </div>
+
+        <div class="footer">
+
+        </div>
+
+        <p id="break4"></p>
+        <p id="break4_under"></p>
 
     </body>
 
