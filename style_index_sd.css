@@ -163,6 +163,7 @@ a:hover, a:focus, a:active, a:visited, a:link{
 
 /* column formatting */
 .info_column {
+    display: block;
   text-align: left;
 }
 
@@ -241,9 +242,7 @@ a:hover, a:focus, a:active, a:visited, a:link{
 }
 
 .pr_container {
-  display: inline;
-  float: left;
-  width: 50%;
+  display: block;
   transition: transform 10s ease-in-out;
 }
 
@@ -452,7 +451,7 @@ Navigation Bar
     /* sizing of text */
   color: black;
   text-decoration: none;
-  font-size: 1em;
+  font-size: 0.8em;
   letter-spacing: 0em;
   text-transform: uppercase;
   font-weight: 500;
@@ -464,15 +463,14 @@ Navigation Bar
   transition: all 0.2s ease-in-out;
 }
 
-
+/*
 .navMenu a:hover {
-    /* text when hovering */
+ 
   color: black;
   font-weight: 510;
 }
 
 .navMenu .dot {
-    /* dot information */
   width: 6px;
   height: 6px;
   background: rgb(0, 0, 0);
@@ -504,3 +502,5 @@ Navigation Bar
   transition: all 0.2s ease-in-out;
   opacity: 1;
 }
+
+*/
