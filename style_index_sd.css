@@ -26,7 +26,6 @@ body {
     background-size: cover;
     background-image: linear-gradient(rgb(250, 79, 121), rgb(255, 137, 137), white, rgb(174, 174, 243), rgb(174, 174, 243), rgb(123, 89, 246));
     background-repeat: no-repeat;
-    /*max-width: 1000px;*/
     max-width: 70%;
     margin: auto;
     line-height: 1.5em;
@@ -162,14 +161,11 @@ a:hover, a:focus, a:active, a:visited, a:link{
 
 /* column formatting */
 .info_column {
-  float: left;
   text-align: left;
-  width: 32%;
-  height: 260px;
 }
 
 .column1 , .column2 {
-  border-right-style: solid;
+  border-bottom-style: solid;
   border-width: 2px;
 }
 
@@ -206,9 +202,7 @@ a:hover, a:focus, a:active, a:visited, a:link{
 }
 
 .iconList li {
-  display: flex;
-  float: left;
-  width: 12.5%;
+  display: inline;
 }
 
 .conticon {
