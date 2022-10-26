@@ -19,6 +19,7 @@ FOR MOBILE USAGE
 * {
   font-family: 'Anonymous Pro', monospace;
   text-align: center;
+  box-sizing: border-box;
 }
 
 body {
@@ -45,16 +46,17 @@ body {
 }
 
 #myBtn {
-  position: fixed;
-  top: 35px;
-  float: left;
-  left: 5%;
-  max-width: 30px;
-  width: 100%;
-  padding: .5px;
-  color:transparent;
-  background-color: transparent;
-  border: none;
+    display: none !important; 
+    position: fixed;
+    top: 35px;
+    float: left;
+    left: 5%;
+    max-width: 30px;
+    width: 100%;
+    padding: .5px;
+    color:transparent;
+    background-color: transparent;
+    border: none;
 }
 
 .fa-arrow-up {
