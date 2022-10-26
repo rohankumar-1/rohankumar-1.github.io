@@ -17,6 +17,7 @@ This sheet is the styling sheet for rohankumar-1.github.io repository and webpag
 * {
   font-family: 'Anonymous Pro', monospace;
   text-align: center;
+  box-sizing: border-box;
 }
 
 body {
