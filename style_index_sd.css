@@ -23,9 +23,9 @@ FOR MOBILE USAGE
 }
 
 body {
-    height: 3300px;
+    height: 3500px;
     background-size: cover;
-    background-image: linear-gradient(rgb(250, 79, 121), rgb(255, 137, 137), white, rgb(174, 174, 243), rgb(174, 174, 243), rgb(123, 89, 246));
+    /*background-image: linear-gradient(rgb(250, 79, 121), rgb(255, 137, 137), white, rgb(174, 174, 243), rgb(174, 174, 243), rgb(123, 89, 246));*/
     background-repeat: no-repeat;
     max-width: 70%;
     margin: auto;
@@ -151,24 +151,47 @@ a:hover, a:focus, a:active, a:visited, a:link{
 
 
 #break1, #break2, #break3, #break4 {border-bottom-style: solid;  padding-top: 170px;}
+#break2 { padding-top: 30%;}
 
-#break3 {padding-top: 800px;}
+#break3 {padding-top: 400px;}
 
 
-/* skills table */
+/*
+
+###############################################################################
+
+Skills Table
+
+################################################################################
+
+
+*/
 
 #skills_info {
-  margin-top: 150px;
+  margin-top: 100px;
+}
+
+#about_header {
+  margin: none;
+  border: none;
+  padding: none;
+  height: 30px;
+  margin-bottom: 0px;
 }
 
 /* column formatting */
 .info_column {
-    display: block;
+  display: block;
   text-align: left;
+  width: 100%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  height: auto;
 }
 
 .column1 , .column2 {
   border-bottom-style: solid;
+  border-right: none;
   border-width: 2px;
 }
 
@@ -180,32 +203,44 @@ a:hover, a:focus, a:active, a:visited, a:link{
 }
 
 #location_header, #activity_header, #skills_header, #language_header {
-  font-size: 1.2em;
-}
-
-#language_header {
-  padding-top: 5%;
-  border-top-style: solid;
-  border-top-width: 2px;
+  font-size: 1em;
 }
 
 .info_text {
   text-align: left;
   padding-left: 15%;
   padding-right: 15%;
-  padding-bottom: 30px;
+  padding-bottom: 5%;
   font-size: 90%;
 }
 
-/* Icon list */
+.column3 {
+  padding-bottom: 5%;
+}
+
+/*
+###############################################################################
+
+Icon List
+
+################################################################################
+*/
 
 .iconList_container {
-  padding-top: 350px;
-  padding-bottom: 100px;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  margin: auto;
+  padding-top: 5%;
+  padding-bottom: 50px;
+
 }
 
 .iconList li {
-  display: inline;
+  flex: 50%;
+  height: 90px;
+  width: 60px;
+  float: auto;
 }
 
 .conticon {
@@ -226,8 +261,16 @@ a:hover, a:focus, a:active, a:visited, a:link{
   opacity: 0.7; 
 }
 
+/*
 
-/* Projects */
+###############################################################################
+
+Projects
+
+################################################################################
+
+
+*/
 
 #about_header {
   text-align: center;
@@ -243,33 +286,12 @@ a:hover, a:focus, a:active, a:visited, a:link{
 
 .pr_container {
   display: block;
-  transition: transform 10s ease-in-out;
 }
 
-.pr_container:hover {
-  cursor: pointer;
-} 
-
-
-.pr_container:hover img {
-  box-shadow: 3px 3px 3px;
-  transform: scale(1.1);
+.pr_container img {
+    height: 70%;
+    width:80%;
 }
-
-.pr_container div {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.pr_container:hover div {
-  visibility: visible;
-  opacity: 0.7; 
-}
-
-
-
-
-
 
 /*
 ########################################################################3
@@ -356,13 +378,13 @@ input:hover:focus::-ms-placeholder, textarea:hover::focus:-ms-placeholder {
 
 #form {
   position: relative;
-  width: 60%;
+  width: 80%;
   margin: 50px auto 100px auto;
 }
 
 input {
   font-size: 1em;
-  width: 75%;
+  width: 100%;
   height: 50px;
   padding: 0px 15px 0px 15px;
   
@@ -385,8 +407,8 @@ input:hover {
 }
 
 textarea {
-  width: 75%;
-  max-width: 75%;
+  width: 100%;
+  max-width: 100%;
   height: 110px;
   max-height: 110px;
   padding: 15px;
@@ -411,7 +433,7 @@ textarea:hover {
 }
 
 #submit {
-  width: 80%;
+  width: 100%;
   
   padding: 0;
   margin: -5px 0px 0px 0px;
@@ -463,7 +485,7 @@ Navigation Bar
   transition: all 0.2s ease-in-out;
 }
 
-/*
+
 .navMenu a:hover {
  
   color: black;
@@ -471,6 +493,7 @@ Navigation Bar
 }
 
 .navMenu .dot {
+  display: none;
   width: 6px;
   height: 6px;
   background: rgb(0, 0, 0);
@@ -503,4 +526,3 @@ Navigation Bar
   opacity: 1;
 }
 
-*/

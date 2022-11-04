@@ -22,10 +22,25 @@ This sheet is the styling sheet for rohankumar-1.github.io repository and webpag
 
 body {
     height: 3300px;
+
+    /*
     background-size: cover;
     background-image: linear-gradient(rgb(250, 79, 121), rgb(255, 137, 137), white, rgb(174, 174, 243), rgb(174, 174, 243), rgb(123, 89, 246));
     background-repeat: no-repeat;
     /*max-width: 1000px;*/
+
+    /*option 1
+    background: #abbaab;  /* fallback for old browsers 
+    background: -webkit-linear-gradient(to bottom, #ffffff, #abbaab);  /* Chrome 10-25, Safari 5.1-6 
+    background: linear-gradient(to bottom, #ffffff, #abbaab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #DAE2F8;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #D6A4A4, #DAE2F8);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #D6A4A4, #DAE2F8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+
+
     max-width: 70%;
     margin: auto;
     line-height: 1.5em;
@@ -79,7 +94,13 @@ p {
 }
 
 
-/* About Me Text*/
+/*
+########################################################################3
+
+About Me
+
+##########################################################################
+*/
 
 .aboutme_container {
   display: block;
@@ -107,6 +128,7 @@ p {
 }
 
 .fa {
+  transform: translateX(-50%);
   display:inline;
   padding-right: 20px;
   padding-left: 20px;
@@ -135,6 +157,7 @@ a:hover, a:focus, a:active, a:visited, a:link{
   opacity: 0;
   visibility: hidden;
   line-height: 1.2em;
+  text-align: center;
 }
 
 .contsocial:hover {
@@ -154,7 +177,13 @@ a:hover, a:focus, a:active, a:visited, a:link{
 #break3 {padding-top: 800px;}
 
 
-/* skills table */
+/*
+########################################################################3
+
+Skills Table
+
+##########################################################################
+*/
 
 #skills_info {
   margin-top: 150px;
@@ -200,7 +229,13 @@ a:hover, a:focus, a:active, a:visited, a:link{
 
 
 
-/* Icon list */
+/*
+########################################################################3
+
+Icon List
+
+##########################################################################
+*/
 
 .iconList_container {
   padding-top: 350px;
@@ -211,10 +246,16 @@ a:hover, a:focus, a:active, a:visited, a:link{
   display: inline;
   float: left;
   width: 12.5%;
+  height: 50%;
 }
 
 .conticon {
   position: relative;
+}
+
+.conticon img {
+  width: 85%;
+  height: 85%;
 }
 
 .conticon div {
@@ -232,7 +273,13 @@ a:hover, a:focus, a:active, a:visited, a:link{
 }
 
 
-/* Projects */
+/*
+########################################################################3
+
+Projects
+
+##########################################################################
+*/
 
 #about_header {
   text-align: center;
@@ -251,6 +298,11 @@ a:hover, a:focus, a:active, a:visited, a:link{
   float: left;
   width: 50%;
   transition: transform 10s ease-in-out;
+}
+
+.pr_container img {
+  height: 70%;
+  width:80%;
 }
 
 .pr_container:hover {
