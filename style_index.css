@@ -23,19 +23,9 @@ This sheet is the styling sheet for rohankumar-1.github.io repository and webpag
 body {
     height: 3300px;
 
-    /*
-    background-size: cover;
-    background-image: linear-gradient(rgb(250, 79, 121), rgb(255, 137, 137), white, rgb(174, 174, 243), rgb(174, 174, 243), rgb(123, 89, 246));
-    background-repeat: no-repeat;
-    /*max-width: 1000px;*/
-
-    /*option 1
-    background: #abbaab;  /* fallback for old browsers 
-    background: -webkit-linear-gradient(to bottom, #ffffff, #abbaab);  /* Chrome 10-25, Safari 5.1-6 
-    background: linear-gradient(to bottom, #ffffff, #abbaab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background: #DAE2F8;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to top, #D6A4A4, #DAE2F8);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to top, #D6A4A4, #DAE2F8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to top, #D6A4A4, #DAE2F8);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #D6A4A4, #DAE2F8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 
 
