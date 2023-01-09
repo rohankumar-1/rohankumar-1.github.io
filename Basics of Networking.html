@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Basics of Networking</title>
+        <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+
+body {
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    height: auto;
+}
+
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+/* From extension ms-toolsai.jupyter */
+/* These classnames are inherited from bootstrap, but are present in most notebook renderers */
+
+.alert {
+    width: auto;
+    padding: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.alert > *:last-child {
+    margin-bottom: 0;
+}
+#preview > .alert:last-child {
+    /* Prevent this being set to zero by the default notebook stylesheet */
+    padding-bottom: 1em;
+}
+
+.alert-success {
+    /* Note there is no suitable color available, so we just copy "info" */
+    background-color: var(--theme-info-background);
+    color: var(--theme-info-foreground);
+}
+.alert-info {
+    background-color: var(--theme-info-background);
+    color: var(--theme-info-foreground);
+}
+.alert-warning {
+    background-color: var(--theme-warning-background);
+    color: var(--theme-warning-foreground);
+}
+.alert-danger {
+    background-color: var(--theme-error-background);
+    color: var(--theme-error-foreground);
+}
+
+</style>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <h1 id="basics-of-networking">Basics of Networking</h1>
+<p>These notes are a simple walkthrough of how networks, the Internet, and the World Wide Web works, including all of the protocols and processes required.</p>
+<p><strong>Table of Contents</strong></p>
+<ul>
+<li><a href="#the-internet"><strong>The Internet</strong></a></li>
+<li><a href="#networks"><strong>Networks</strong></a>
+<ul>
+<li><a href="#internet-protocol"><strong>Internet Protocol</strong></a></li>
+<li><a href="#packets"><strong>Packets</strong></a></li>
+</ul>
+</li>
+<li><a href="#routing"><strong>Routing</strong></a>
+<ul>
+<li><a href="#transmission-control-protocol-tcp"><strong>Transmission Control Protocol (TCP)</strong></a></li>
+<li><a href="#user-datagram-protocol-udp"><strong>User Datagram Protocol (UDP)</strong></a></li>
+</ul>
+</li>
+<li><a href="#world-wide-web"><strong>World Wide Web</strong></a>
+<ul>
+<li><a href="#domain-name-system-dns"><strong>Domain Name System (DNS)</strong></a></li>
+<li><a href="#hypertext-transfter-protocol-http"><strong>Hypertext Transfter Protocol (HTTP)</strong></a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="the-internet"><strong>The Internet</strong></h2>
+<p>The Internet is a global network of computing devices communicating with each other in come way. It is an open network, which means any computing device can join as long as they follow protocols. These protocols define how devices must communicate.</p>
+<p>We need:</p>
+<ul>
+<li><span style="color:darkgreen"><strong>Connections</strong></span>: wires and wireless signals between devices</li>
+<li><span style="color:darkgreen"><strong>IP</strong></span>: protocol that uniquely identifies devices uses IP addresses and provides a strategy to send data to a destination address</li>
+<li><span style="color:darkgreen"><strong>TCP/UDP</strong></span>: protocols that can transport packets of data from one device to another and check for errors</li>
+<li><span style="color:darkgreen"><strong>TLS</strong></span>: protocol for sending encrypted data for privacy/security</li>
+<li><span style="color:darkgreen"><strong>HTTP + DNS</strong></span>: protocols powering the World Wide Web, what the browser uses every time you load a webpage</li>
+</ul>
+<hr>
+<h2 id="networks"><strong>Networks</strong></h2>
+<p>A computer network is any group of interconnected devices. Network topology refers to the arrangement of connections between devices. There can be rings, mesh, trees, buses, etc.</p>
+<p>Types:</p>
+<ol>
+<li><span style="color:darkgreen">Local Area Network (LAN)</span>:
+<ul>
+<li>covers a limited area</li>
+</ul>
+</li>
+<li><span style="color:darkgreen">Wide Area Network (WAN)</span>:
+<ul>
+<li>a network that extends of large geographic areas, composed of many LANs</li>
+<li>the Internet is a WAN</li>
+</ul>
+</li>
+<li><span style="color:darkgreen">Data Center Network (DCN)</span>:
+<ul>
+<li>used in data centers that require speed</li>
+</ul>
+</li>
+</ol>
+<p>To communicate over the internet, they must use Internet networking protocols to traverse connections.</p>
+<p><strong>Physical network connections</strong> are comprised of cables, such as copper cables like the CAT5. In order to make sure the cables can transmit info that can be understood by the recipient, they follow the Ethernet standards, so they are often called Ethernet cables.</p>
+<p>Another type of physical connection is fiber-optics, which carry light instead of electricity. These also follow Ethernet standards. These wires are capable of transmitting more data per second, so they are used for bulk long distance networking.</p>
+<p>There are also <strong>wireless connections</strong> that don't require wiring. Computers have wireless cards, which turns binary into radio waves and transmit through the air, with a range of 100-1000 ft depending on obstacles. The waves are hopefully picked up by a wireless access point which converts the data back into binary, and then these access points are connected to the rest of the network using physical wiring. This is the idea behind WiFi, where the WiFi router uses copper Ethernet to connected to the metropolitan network.</p>
+<p><span style="color:darkgreen"><strong>Bit Rate</strong></span>: the number of bits of data send each second</p>
+<ul>
+<li>connections are often measured in Mbps (megabits per second)</li>
+</ul>
+<p><span style="color:darkgreen"><strong>Bandwith</strong></span>: term to describe the maximum bit rate of a system</p>
+<ul>
+<li>a bandwidth of 100 Mbps means the connection cannot transfter more than 100 Mbps</li>
+</ul>
+<p><span style="color:darkgreen"><strong>Latency</strong></span>: measures how late bits arrive (time between sending and receiving message)</p>
+<ul>
+<li>we check the round-trip latency of a requent</li>
+<li>ex. pinging a google server and checking how long it takes to receive a message back</li>
+</ul>
+<p><span style="color:darkgreen"><strong>Speed</strong></span>: combination of bandwidth and latency</p>
+<ul>
+<li>computers split messages into packets, so even if a computer connection has a high bandwidth, the latency might limit how fast the packets can be sent</li>
+</ul>
+<br>
+<h3 id="internet-protocol"><strong>Internet Protocol</strong></h3>
+<p>The IP is a core protocol used to handle addressing and routing. IP addresses are unique identifiers of connected devices. Computers must specify IP address of the recipient and include its own IP so that the other computer can reply.</p>
+<p>There are two versions of the IP address:</p>
+<ol>
+<li><span style="color:darkgreen"><strong>IPv4</strong></span>: original, 4 numbers, all between 0-255
+<ul>
+<li>4 billion addresses total</li>
+</ul>
+</li>
+<li><span style="color:darkgreen"><strong>IPv6</strong></span>: newer/more size, uses hex numbers, 8 total 4bit hex numbers
+<ul>
+<li>340 undecillion possible addresses</li>
+<li>backwards compatible</li>
+</ul>
+</li>
+</ol>
+<p>IP addresses can change at any time, since each internet service providers have a range of addresses they can assign, and they might give you a different one of those addresses each time they see your computer appear on a network (this is called a <strong>dynamic IP address</strong>).</p>
+<p>Computers that act as servers often have <strong>static IP addresses</strong>, so that it is easier for computers to quickly send requests.</p>
+<p>There is a hierarchy to the address values. Consider the following IP address:</p>
+<pre><code>XXXX.YYYY.ZZZZ.WWWW
+</code></pre>
+<p>The first section, of X and Y, is the network identifier, and the last section is the individual node in the network. This hierarchy makes it easier to route messages from source to destination</p>
+<p><span style="color:darkgreen"><strong>Subnets</strong></span>: subnetworks that an IP address can be further split into if necessary.</p>
+<br>
+<h3 id="packets"><strong>Packets</strong></h3>
+<p>There is a limit to how large a message can be, since there is a limit to how much data can be reasonably transmitted at once by the physical network connections. Thus, IP describes the process of splitting messages into multiple smaller <strong>packets</strong>.</p>
+<p>Each packet contains a header (20-24 bytes long) that prefaces the data. This contains things such as:</p>
+<ul>
+<li>version</li>
+<li>length</li>
+<li>service type</li>
+<li>ID</li>
+<li>source IP address</li>
+<li>destination IP address</li>
+<li>options</li>
+<li>and more</li>
+</ul>
+<hr>
+<br>
+<h2 id="routing"><strong>Routing</strong></h2>
+<p>The Internet Protocol also explains how to route messages from one computer to another.</p>
+<ol>
+<li><span style="color:darkgreen"><strong>Send Packet to Router</strong></span>: to nearest router, where a router is a type of computing device used in networks to move the packets along</li>
+<li><span style="color:darkgreen"><strong>Router Receives Packet</strong></span>: router examines IP header, taking note of destination address</li>
+<li><span style="color:darkgreen"><strong>Router Forwards Packet</strong></span>: router uses a <code>forwarding table</code> that helps it choose the next path for the packet based on the destination IP (or parts of it)
+<ul>
+<li>the packet is forwarded to another router that rechecks</li>
+</ul>
+</li>
+<li><span style="color:darkgreen"><strong>Final Router Forwards</strong></span>: eventually a router is found where the destination is in the router network, and the packet is sent to the destination IP address</li>
+</ol>
+<p>There are often many possible paths a packet can go down to reach the same destination. This is called the <strong>redundancy</strong> of a network.</p>
+<p>We want to take the fastest path, but in case a connection is no longer available, there are usually other paths to take.</p>
+<p><span style="color:darkgreen"><strong>Fault-Tolerance</strong></span>: a system that can experience failure in its components but still operate</p>
+<ul>
+<li>big contributor is the redundancy of network routing paths</li>
+<li>we make sure there is no single point of failure between important areas (such as coasts of continents)</li>
+</ul>
+<br>
+<h3 id="transmission-control-protocol-tcp"><strong>Transmission Control Protocol (TCP)</strong></h3>
+<p>There are several problems with packet transmission. These issues cannot be solved with just the Internet Protocol (IP).</p>
+<p>For example, if a computer sends multiple messages, the destination needs to identify which packets belong to which message. Also, packets can arrive out of order or corrupted or lost, so the message might be compromised.</p>
+<p>This is where the Transmission Control Protocol (TCP) comes into play.</p>
+<p>When sending data using TCP/IP, the data section (after the IP header) is formatted as a TCP segment. Each TCP segment has a header and then the packet data that is actually being transmitted. The TCP header is very large, around 20-60 bytes. Some of the fields include the source and destination port numbers, checksum, and others, which are used to distinguish traffic flows and data corruption (read UDP section below for more).</p>
+<p>This is the process of transmission over TCP/IP:</p>
+<ol>
+<li><span style="color:darkgreen"><strong>Establish Connection</strong></span>:
+<ol>
+<li>Computers establish a connection using a three-way handshake</li>
+<li>First computer sends a packet with the a bit called SYN set to 1 (for synchronize?)</li>
+<li>Second computer sends back a packet with the ACK bit set to 1 (acknowledge!)</li>
+<li>First computer replies back with ACK set to 1
+<blockquote>
+<p>these bits are part of the TCP header</p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><span style="color:darkgreen"><strong>Send packets of Data</strong></span>:
+<ol>
+<li>First computer sends packet with data and sequence number</li>
+<li>Second comptuer acknowledges (ACK=1) and increases the acknowledgement number by the length of the received data
+<blockquote>
+<p>the acknowledgement number and sequence number are also part of the TCP header, and keep track of which data was successfully received, lost, and sent twice</p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><span style="color:darkgreen"><strong>Close the Connection</strong></span>:
+<ol>
+<li>First computer closes connection by sending packet with FIN=1</li>
+<li>Second computer replies with ACK=1 and another FIN=1</li>
+<li>First computer replies with ACK=1 and the connection is closed</li>
+</ol>
+</li>
+</ol>
+<p><strong>Detecting Lost Packets</strong><br>
+After sending a packet, the sender starts a timer and puts the packet in the retransmission queue.  If the timer runs out and the sender has not received the ACK signal, it sends the packet again.</p>
+<p><strong>Handling out of Order Packets</strong><br>
+The recipient can use the sequence and acknowledgement numbers to tell whether they have out of order packets. If the recipient sees a higher sequence number than what they have acknowledged so far, they know that they are missing at least one packet. The recipient sends a packet back with the acknowledgement number set to the sequence number expected.</p>
+<p>The sequence numbers can be used to reassemble the packet data in the correct order.</p>
+<br>
+<h3 id="user-datagram-protocol-udp"><strong>User Datagram Protocol (UDP)</strong></h3>
+<p>This protocol is a lightweight data transport protocol that works on top of IP. It provides a mechanism to detect corrupt data in packets, but does not attempt to solve the other problems, which makes it unreliable, but very simple and fast.</p>
+<p>When packets use UDP, the data section (after the IP header) is structured as a UDP segment, which itself has an 8-byte header and variable length data.</p>
+<p>The first 4 bytes store the port numbers for the source and destination, which helps distinguish different types of network traffic. The next two bytes of the UDP header stores the length (in bytes) of the segment. Since this is 16 bits, the max length of a UDP segment in 65,535 bytes. The final two bytes of the UDP is the <code>checksum</code>, a field thats used to check for data corruption. By comparing the stored checksum and the newly computer checksum upon arrival, a computer can tell whether the data has been corrupted if these values are different.</p>
+<br>
+<hr>
+<h2 id="world-wide-web"><strong>World Wide Web</strong></h2>
+<p>The Web is a massive network of webpages, programs, and files that are accessible via URLs.</p>
+<p>A web browser loads a webpage using various protocols on top of the TCP/IP stack:</p>
+<ol>
+<li><span style="color:darkgreen">Domain Name System (DNS)</span>: to convert a domain name into an IP address</li>
+<li><span style="color:darkgreen">HyperText Transfer Protocol (HTTP)</span>: to request the webpage contents from that IP address</li>
+</ol>
+<p>It might also use the Transport Layer Security (TLS) protocol to serve the website over a secure, encrypted connection.</p>
+<h3 id="domain-name-system-dns"><strong>Domain Name System (DNS)</strong></h3>
+<p>The IP address is how a computer identifies other computers on the Internet. However, we use domain names in order to not have to memorize IP addresses. Therefore, we need the Domain Name System (DNS).</p>
+<p>Each domain name is made up of parts:</p>
+<pre><code>third-level-domain.second-level-domain.top-level-domain
+</code></pre>
+<p>The <code>top level domains (TLDs)</code> are a limited set, and the most common ones are .com, .org, and .edu.</p>
+<p>The <code>second level domain</code> is the unique identifier for the company or organization</p>
+<p>The <code>third level domain</code> is also called a subdomain, because it's owned by the same group and that URL often directs you to a subset of the website.</p>
+<p>The computer needs a way to map domain names to an IP address, but it cannot hold all 300 million domain names locally. It goes through a process of searching:</p>
+<ol>
+<li>Check the local cache: recently visited websites are checked first</li>
+<li>Ask the ISP cache: every ISP provides domain name resolving service and keeps its own cache.</li>
+<li>Ask the name servers: there are domain name servers scattered around the globe that are responsible for keeping track of a subset of the millions of domain names.
+<ul>
+<li>ISP starts by asking for servers that track the root name servers (check servers that knows about .org domains)</li>
+<li>then root name server responds with TLD name server</li>
+<li>TLD name server gives information on host name server (check servers that know about &quot;wikipedia&quot; hostname)</li>
+<li>last step is asking host name server where <a href="http://www.wikipedia.org">www.wikipedia.org</a> is, and the exact IP address is returned</li>
+</ul>
+</li>
+</ol>
+<p>Since a lot of information is cached along the way, its rare that a DNS lookup goes through so many steps.</p>
+<p><span style="color:darkgreen"><strong>Spoofing</strong></span>: cyber criminals can control name servers and reply with any IP address it desires
+- can send users to a page that downloads computer viruses, etc
+- can be prevented with DNSSEC protocol, which extends the original and specifies the best way for DNS resolvers to authenticate the info sent to them</p>
+<br>
+<h3 id="hypertext-transfter-protocol-http"><strong>Hypertext Transfter Protocol (HTTP)</strong></h3>
+<p>THis protocol is how your computer downloads a page from another computer somewhere on the internet.</p>
+<ol>
+<li>Director browser to URL:
+<ul>
+<li>user types <code>Uniform Resource Locator (URL)</code> or follows link</li>
+<li>starts with http, which specifies that browser needs to use HTTP to fetch the document for that URL</li>
+</ul>
+</li>
+<li>Browser Looks up IP:
+<ul>
+<li>DNS fetches the IP address</li>
+</ul>
+</li>
+<li>Browser Sends HTTP Request:
+<ul>
+<li>once IP of host is identified, browser sends HTTP request</li>
+<li>specifies the action (GET, POST), the webpage wanted (from the whole website), the protocol and version, and the domain of the requested URL (in case the host stores multiple)</li>
+<li>ex:<pre><code>GET /index.html HTTP/1.1
+Host: www.example.com
+</code></pre>
+</li>
+</ul>
+</li>
+<li>Host Sends Back HTTP Response:
+<ul>
+<li>response contains content + metadata</li>
+<li>it also returns the <code>HTTP Status Code</code></li>
+<li>ex. 404 is the code for webpage not found</li>
+<li>the content is rendered by the browser and displayed</li>
+</ul>
+</li>
+</ol>
+
+        
+        
+    </body>
+    </html>
