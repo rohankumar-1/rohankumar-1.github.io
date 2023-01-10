@@ -1,0 +1,614 @@
+/* 
+#########################################################################################################
+
+Author: Rohan Kumar
+Updated: 10/20/22
+This sheet is the styling sheet for rohankumar-1.github.io repository and webpage.
+
+#########################################################################################################
+*/
+
+/*
+*************************************************
+
+Random
+
+*************************************************
+*/
+
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&display=swap');
+
+* {
+  font-family: 'Anonymous Pro', monotone;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+/*
+'https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&display=swap'
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;300;400;600&display=swap');
+*/
+
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  overflow: scroll;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(86, 6, 199);
+}
+
+
+
+
+/*
+###########################################
+
+Body
+
+###########################################
+*/
+
+body {
+  width: 65%;
+  margin: auto;
+  height: auto;
+  margin-bottom: 10%;
+  background: rgb(191, 191, 191);
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+#topanchor {
+  position:absolute;
+  top: 0px;
+}
+  
+#myBtn {
+  display: none;
+  position: fixed;
+  top: 35px;
+  float: left;
+  left: 5%;
+  max-width: 30px;
+  width: 100%;
+  padding: .5px;
+  color: transparent;
+  background-color: transparent;
+  border: none;
+}
+  
+.fa-arrow-up {
+  color: black;
+}
+
+/*On Hover Color Change*/
+.fa-arrow-up:hover {
+  color: rgb(86, 6, 199);
+}
+
+  /*
+#######################################################################################
+
+Navigation Bar
+
+#########################################################################################
+*/
+
+
+/* nav bar and dot*/
+
+.navMenu {
+    /* position */
+  position: absolute;
+  top: 5%;
+  right: 10px;
+  animation: fade-in 650ms 400ms backwards;
+}
+.navMenu a {
+    /* sizing of text */
+  color: black;
+  text-decoration: none;
+  font:700;
+  font-size: 1.1em;
+  letter-spacing: 0em;
+  text-transform: uppercase;
+  font-weight: 500;
+  display: inline;
+  width: 20%;
+  margin-right: 30px;
+  margin-left: 30px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.navMenu a:hover {
+    /* text when hovering */
+  color: white;
+  font-weight: 510;
+  background-color: rgb(86, 6, 199);
+}
+
+.navMenu .dot {
+    /* dot information */
+  width: 6px;
+  height: 6px;
+  background: rgb(0, 0, 0);
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-transform: translateX(60px);
+  transform: translateX(60px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.navMenu a:nth-child(1):hover ~ .dot {
+  -webkit-transform: translateX(51px);
+  transform: translateX(51px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+.navMenu a:nth-child(2):hover ~ .dot {
+  -webkit-transform: translateX(178px);
+  transform: translateX(178px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+.navMenu a:nth-child(3):hover ~ .dot {
+  -webkit-transform: translateX(315px);
+  transform: translateX(315px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.navMenu a:nth-child(4):hover ~ .dot {
+  -webkit-transform: translateX(450px);
+  transform: translateX(450px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+/*
+#####################################################
+
+About Me
+
+#####################################################
+*/
+
+/*
+PICTURES
+*/
+
+.abt {  
+  margin-top: 150px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "pictures abttext";
+    
+}
+
+.pictures { 
+  grid-area: pictures; 
+  width: auto;
+  height: auto;
+  position: relative;
+  display: inline-block;
+  
+  animation: fade-up 650ms 400ms backwards;
+    
+}
+
+.abttext {  
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.8fr 1.4fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+      "main"
+      "social";
+  grid-area: abttext;
+  
+  animation: fade-up 650ms 400ms backwards;
+}
+
+.main { 
+    grid-area: main; 
+}
+
+.social { 
+    grid-area: social; 
+}
+
+.nosuit {
+    display: none;
+}
+
+.pictures img {
+    position: inherit;
+    width: 85%;
+    height: auto;
+}
+
+.pictures:active .suit {
+    display: none;
+}
+
+.pictures:active .nosuit {
+    display: inline;
+}
+
+
+/*
+INFO
+*/
+
+.main {
+    justify-content: center;
+    justify-items: center;
+    margin: 5%;
+    float:inline-end;
+    vertical-align: middle;
+}
+
+.main * {
+    text-align: left;
+}
+
+/*
+SOCIAL
+*/
+
+.social_linkbar {
+    display: inline;
+    text-align: center;
+}
+
+.contsocial {
+    float: left;
+    text-align: center;
+    width: 33.33%;
+}
+
+.contsocial div {
+    opacity: 0;
+    visibility: hidden;
+    line-height: 1.2em;
+    text-align: center;
+}
+
+.contsocial:hover div {
+    visibility: visible;
+    opacity: 0.7; 
+}
+
+.contsocial {
+    cursor: pointer;
+}
+
+/*
+########################################################################3
+
+Skills Table
+
+##########################################################################
+*/
+
+#skills_info {
+    margin-top: 125px;
+}
+  
+  /* column formatting */
+.info_column {
+    float: left;
+    text-align: left;
+    width: 32%;
+    height: 260px;
+}
+  
+.column1 , .column2 {
+    border-right-style: solid;
+    border-width: 2px;
+}
+  
+  /*text in column formatting */
+.info_column div {
+    text-align: left;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+  
+#location_header, #activity_header, #skills_header, #language_header {
+    font-size: 1.45em;
+}
+  
+#language_header {
+    padding-top: 5%;
+    border-top-style: solid;
+    border-top-width: 2px;
+}
+  
+.info_text {
+    text-align: left;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-bottom: 30px;
+}
+
+
+/*
+########################################################################3
+
+Icon List
+
+##########################################################################
+*/
+
+.iconList_container {
+    padding-top: 350px;
+    padding-bottom: 100px;
+}
+
+.iconList li {
+    display: inline;
+    float: left;
+    width: 12.5%;
+    height: 50%;
+}
+
+.conticon {
+    position: relative;
+}
+
+.conticon img {
+    width: 85%;
+    height: 85%;
+}
+
+.conticon div {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.conticon:hover {
+    cursor: pointer;
+}
+
+.conticon:hover div {
+    visibility: visible;
+    opacity: 0.7; 
+}
+
+
+/*
+
+##########################################
+
+Projects
+
+##########################################
+
+*/
+
+#projects {
+    margin-top: 150px;
+    
+    animation: fade-up 650ms 400ms backwards;
+    text-align: left;
+}
+
+
+
+/*
+
+##########################################
+
+Contacts
+
+##########################################
+
+*/
+
+.contact {
+    margin-top: 150px;
+    animation: fade-up 650ms 400ms backwards;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color: black;
+    font-size: 1em;
+  }
+  
+  input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {
+    color: black;
+  }
+  
+  input::-moz-placeholder, textarea::-moz-placeholder {
+    color: black;
+    font-size: 1em;
+  }
+  
+  input:focus::-moz-placeholder, textarea:focus::-moz-placeholder {
+    color: black;
+  }
+  
+  input::placeholder, textarea::placeholder {
+    color: black;
+    font-size: 1em;
+  }
+  
+  input:focus::placeholder, textarea::focus:placeholder {
+    color: black;
+  }
+  
+  input::-ms-placeholder, textarea::-ms-placeholder {
+    color: black;
+    font-size: 1em;
+  }
+  
+  input:focus::-ms-placeholder, textarea:focus::-ms-placeholder {
+    color: black;
+  }
+  
+  /* on hover placeholder */
+  
+  input:hover::-webkit-input-placeholder, textarea:hover::-webkit-input-placeholder {
+    color: black;
+    font-size: 1em;
+  }
+  
+  input:hover:focus::-webkit-input-placeholder, textarea:hover:focus::-webkit-input-placeholder {
+    color: black;
+  }
+  
+  input:hover::-moz-placeholder, textarea:hover::-moz-placeholder {
+    color: black;
+    font-size: 1em;
+  }
+  
+  input:hover:focus::-moz-placeholder, textarea:hover:focus::-moz-placeholder {
+    color: black;
+  }
+  
+  input:hover::placeholder, textarea:hover::placeholder {
+    color: black;
+    font-size: 1em;
+  }
+  
+  input:hover:focus::placeholder, textarea:hover:focus::placeholder {
+    color: black;
+  }
+  
+  input:hover::placeholder, textarea:hover::placeholder {
+    color: black;
+    font-size: 1em;
+  }
+  
+  input:hover:focus::-ms-placeholder, textarea:hover::focus:-ms-placeholder {
+    color: black;
+  }
+  
+  
+  #form {
+    position: relative;
+    width: 60%;
+    margin: 50px auto 100px auto;
+  }
+  
+  input {
+    font-size: 1em;
+    width: 80%;
+    height: 50px;
+    padding: 0px 15px 0px 15px;
+    
+    background: transparent;
+    outline: none;
+    color: #000000;
+    
+    border: solid 1px black;
+    border-bottom: none;
+    
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+  }
+  
+  input:hover {
+    background: #f9d0e8;
+    color: #000000;
+  }
+  
+  textarea {
+    width: 80%;
+    max-width: 80%;
+    height: 110px;
+    max-height: 110px;
+    padding: 15px;
+    
+    background: transparent;
+    outline: none;
+    
+    color: #000000;
+    font-size: 1em;
+    
+    border: solid 1px #000000;
+    
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+  }
+  
+  textarea:hover {
+    background: #f9d0e8;
+    color: #000000;
+  }
+  
+  #submit {
+    width: 80%;
+    
+    padding: 0;
+    margin: -5px 0px 0px 0px;
+    
+    font-size: 1em;
+    color: #000000;
+    
+    outline:none;
+    cursor: pointer;
+    
+    border: solid 1px #000000;
+  }
+  
+  #submit:hover {
+    color: #000000;
+  }
+  
+
+
+/*
+##########################################
+
+Notefinder
+
+##########################################
+*/
+
+.notes {
+    margin-top: 150px;
+    animation: fade-up 650ms 400ms backwards;
+}
+
+.notes ul {
+    width: 75%;
+    text-align: left;
+}
+
+  
+  
