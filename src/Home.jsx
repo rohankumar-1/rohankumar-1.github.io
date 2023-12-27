@@ -1,4 +1,5 @@
 import Card from "react-bootstrap/Card";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 // style sheet
 import "./Home.css";
@@ -6,25 +7,28 @@ import "./Home.css";
 const Home = () => {
     return (
         <div className="page-content">
-            <div className="text-start first">
+            <div className="first">
 
                 <div id="about-me"></div>
 
-                <h2>About Me</h2>
-
-                <img></img>
+                <h1 className="text-start">About Me</h1>
 
                 <div className="info">
-                    <p> <b>Location</b>: Boston, MA</p>
-                    <p> <b>Email</b>: roku@bu.edu</p>
-                    <p> <b>LinkedIn</b>: <a href="/">FILLLL</a></p>
-                    <p> <b>Github</b>: <a href="/">rohankumar-1</a></p>
+                    <img className="picture" src="./../data/profile_picture.jpg" alt="me!"/>
+                    <div className="text-start">
+                        <p>Boston, MA</p>
+                        <p>roku@bu.edu</p>
+                        <div>
+                            <a href="https://github.com/rohankumar-1"><i className="icon bi bi-github"></i></a>
+                            <a href="https://www.linkedin.com/in/rohan-kumar-in/"><i className="icon bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
                 </div>
 
-                <p>
+                <p className="text-start">
                     Hello! I am an undergrad Computer Engineering major at Boston University (ENG). I'm currently doing research with MIT Sloan, under Prof. Dimitris Bertsimas, and with BU ENG, under Prof. Ayse Coskun. My current interest is in applied Machine Learning, particularly in cloud systems and healthcare.
                 </p>
-                <p>
+                <p className="text-start">
                     I hope to eventually attend graduate school, and continue research, but I plan venture into industry at some point in the future. Feel free to reach out at roku@bu.edu.
                 </p>
             </div>
@@ -33,7 +37,7 @@ const Home = () => {
 
                 <div id="projects"></div>
 
-                <h2>Projects</h2>
+                <h1>Projects</h1>
 
                 <div className="projectList d-flex flex-wrap">
 
@@ -83,7 +87,7 @@ const Home = () => {
 
                 <div id="CV"></div>
 
-                <h2>Curriculum Vitae</h2>
+                <h1>Curriculum Vitae</h1>
                 <p>
                     A PDF version of this CV can be found <a href="./../data/resume.pdf">here</a>.
                 </p>
