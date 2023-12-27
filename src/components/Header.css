@@ -5,11 +5,18 @@ html {
 
 .nav-brand {
     font-size: 1.625rem !important;
+    color: rgb(155, 155, 155) !important;
 }
 
 .nav-container {
+    color: white !important;
+    background-color: gray !important;
     width: 100vw;
     margin: auto;
+}
+
+.bar {
+    background-color: rgb(83, 83, 83) !important;
 }
  
 .header-nav-logo {
@@ -18,7 +25,7 @@ html {
 
 .navLink {
     text-decoration: none;
-    color: black;
+    color: rgb(155, 155, 155);
     font-size: 1.25rem;
     transition: all 0.2s linear;
     margin-right: 10px;

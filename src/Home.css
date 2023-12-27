@@ -67,7 +67,7 @@
 
 .proj {
     width: 22rem;
-    min-height: 400px;
+    min-height: 500px;
     transition: transform 0.2s;
     margin-block: 10px;
     font-size: 1rem;
@@ -79,7 +79,35 @@
     margin-bottom: 100px;
 }
 
+.img-container {
+    display: flex;
+    justify-content: center;
+    height: 50%;
+}
 
+.proj-image {
+    margin:3px;
+    object-fit: contain;
+}
+
+.proj-text {
+    margin: auto;
+}
+
+.proj-link {
+    position:absolute;
+    bottom: 20px;
+    text-decoration: none;
+    padding: 5px;
+    border-style: solid;
+    color: black;
+    border-radius: 10px;
+    transition: transform 0.2s;
+}
+
+.proj-link:hover {
+    transform: scale(1.1);
+}
 
 @media only screen and (max-width: 900px) {
     .page-content {

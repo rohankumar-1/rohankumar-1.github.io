@@ -42,42 +42,62 @@ const Home = () => {
                 <div className="projectList d-flex flex-wrap">
 
                     <Card className="proj">
-                        <Card.Img variant="top"/>
+                        <div className="img-container">
+                            <Card.Img className="proj-image" src="/src/assets/portfolio.png" variant="top"/>
+                        </div>
                         <Card.Body>
                             <Card.Title>Portfolio Site</Card.Title>
-                            <Card.Text>
+                            <Card.Text className="proj-text">
                                 Used React.js and Node.js to write a simple portfolio webpage hosted on Github Pages. Currently viewing :)
                             </Card.Text>
                         </Card.Body>
+                        <Card.Body>
+                            <Card.Link className="proj-link" href="https://github.com/rohankumar-1/rohankumar-1.github.io">Repository</Card.Link>
+                        </Card.Body>
                     </Card>
 
                     <Card className="proj">
-                        <Card.Img variant="top"/>
+                        <div className="img-container">
+                            <Card.Img className="proj-image" src="/src/assets/gradimg.png" variant="top"/>
+                        </div>
                         <Card.Body>
                             <Card.Title>Simple Autograd</Card.Title>
-                            <Card.Text>
+                            <Card.Text className="proj-text">
                             Inspired by Andrej Karpathy's micrograd, a functional neural network library from scratch. Automatic differentation for backprop, and modular NN architecture framework. Written in Python3 using numpy.
                             </Card.Text>
                         </Card.Body>
-                    </Card>
-
-                    <Card className="proj">
-                        <Card.Img variant="top"/>
                         <Card.Body>
-                            <Card.Title>Multimodal Clock using VGA and FPGA</Card.Title>
-                            <Card.Text>
-                                The goal of this project was to learn more about HDLs and implementation of combinational+sequential logic on FPGAs. A simple clock with 12h, 24h, timer, and stopwatch capabilities, written in Verilog and outputted to a monitor via VGA connection.
-                            </Card.Text>
+                            <Card.Link className="proj-link" href="https://github.com/rohankumar-1/autograd">Repository</Card.Link>
                         </Card.Body>
                     </Card>
 
                     <Card className="proj">
-                        <Card.Img variant="top"/>
+                        <div className="img-container">
+                            <Card.Img className="proj-image" src="/src/assets/nexys.jpg" variant="top"/>
+                        </div>
+                        <Card.Body>
+                            <Card.Title>Multimodal Clock using VGA and FPGA</Card.Title>
+                            <Card.Text className="proj-text">
+                                The goal of this project was to learn more about HDLs and implementation of combinational+sequential logic on FPGAs. A simple clock with 12h, 24h, timer, and stopwatch capabilities, written in Verilog and outputted to a monitor via VGA connection.
+                            </Card.Text>
+                        </Card.Body>
+                        <Card.Body>
+                            <Card.Link className="proj-link" href="https://github.com/rohankumar-1/Multimodal-Clock-FPGA">Repository</Card.Link>
+                        </Card.Body>
+                    </Card>
+
+                    <Card className="proj">
+                        <div className="img-container">
+                            <Card.Img className="proj-image" src="/src/assets/mainpic.png" variant="top"/>
+                        </div>
                         <Card.Body>
                             <Card.Title>SimpleChess App</Card.Title>
-                            <Card.Text>
-                            Chess app, implemented from scratch, on Anroid Studio, written in Java. Complete backend for chess logic, as well as leaderboard, persistent game state, and multiple levels of Bot difficulties (based on different backtracking + chess bot logic).  
+                            <Card.Text className="proj-text">
+                            Chess app, implemented from scratch, on Android Studio, written in Java. Complete backend for chess logic, as well as leaderboard, persistent game state, and multiple levels of Bot difficulties (based on different backtracking + chess bot logic).  
                             </Card.Text>
+                        </Card.Body>
+                        <Card.Body>
+                            <Card.Link className="proj-link" href="https://agile.bu.edu/gitlab/public-projects/ec327-public-projects/group12project/-/tree/master/app/src/main/res/drawable?ref_type=heads">Repository</Card.Link>
                         </Card.Body>
                     </Card>
                 </div>
