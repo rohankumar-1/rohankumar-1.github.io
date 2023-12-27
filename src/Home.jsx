@@ -1,6 +1,15 @@
 import Card from "react-bootstrap/Card";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
+// content
+import profilepic from "./../data/profile_picture.jpg";
+import resume from "./../data/resume.pdf";
+
+import gradimg from "./assets/gradimg.png";
+import portfolioimg from "./assets/portfolio.png";
+import chessimg from "./assets/mainpic.png";
+import fpgaimg from "./assets/nexys.jpg";
+
 // style sheet
 import "./Home.css";
 
@@ -14,7 +23,7 @@ const Home = () => {
                 <h1 className="text-start">About Me</h1>
 
                 <div className="info">
-                    <img className="picture" src="./../data/profile_picture.jpg" alt="me!"/>
+                    <img className="picture" src={profilepic} alt="me!"/>
                     <div className="text-start">
                         <p>Boston, MA</p>
                         <p>roku@bu.edu</p>
@@ -43,7 +52,7 @@ const Home = () => {
 
                     <Card className="proj">
                         <div className="img-container">
-                            <Card.Img className="proj-image" src="/src/assets/portfolio.png" variant="top"/>
+                            <Card.Img className="proj-image" src={portfolioimg} variant="top"/>
                         </div>
                         <Card.Body>
                             <Card.Title>Portfolio Site</Card.Title>
@@ -58,7 +67,7 @@ const Home = () => {
 
                     <Card className="proj">
                         <div className="img-container">
-                            <Card.Img className="proj-image" src="/src/assets/gradimg.png" variant="top"/>
+                            <Card.Img className="proj-image" src={gradimg} variant="top"/>
                         </div>
                         <Card.Body>
                             <Card.Title>Simple Autograd</Card.Title>
@@ -73,7 +82,7 @@ const Home = () => {
 
                     <Card className="proj">
                         <div className="img-container">
-                            <Card.Img className="proj-image" src="/src/assets/nexys.jpg" variant="top"/>
+                            <Card.Img className="proj-image" src={fpgaimg} variant="top"/>
                         </div>
                         <Card.Body>
                             <Card.Title>Multimodal Clock using VGA and FPGA</Card.Title>
@@ -88,7 +97,7 @@ const Home = () => {
 
                     <Card className="proj">
                         <div className="img-container">
-                            <Card.Img className="proj-image" src="/src/assets/mainpic.png" variant="top"/>
+                            <Card.Img className="proj-image" src={chessimg} variant="top"/>
                         </div>
                         <Card.Body>
                             <Card.Title>SimpleChess App</Card.Title>
@@ -109,7 +118,7 @@ const Home = () => {
 
                 <h1>Curriculum Vitae</h1>
                 <p>
-                    A PDF version of this CV can be found <a href="./../data/resume.pdf">here</a>.
+                    A PDF version of this CV can be found <a href={resume}>here</a>.
                 </p>
 
                 <h4>Education</h4>
