@@ -1,0 +1,83 @@
+
+.page-content {
+    width: 60%;
+    margin: auto;
+    margin-top: 90px;
+    background-color: white;
+    opacity: 1.0;
+}
+
+.first {
+    margin-bottom: 60px;
+}
+
+#about-me {
+    position: absolute;
+    top: 0;
+}
+
+#projects {
+    position: absolute;
+    margin-top: -60px;
+}
+
+#CV {
+    position: absolute;
+    margin-top: -60px;
+}
+
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    width: 50%;
+
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    p {
+        margin: 5px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+}
+
+
+.proj {
+    width: 22rem;
+    min-height: 400px;
+    transition: transform 0.2s;
+    margin-block: 10px;
+    font-size: 1rem;
+}
+
+.projectList {
+    justify-content: space-around;
+    align-items: space-around;
+    margin-bottom: 60px;
+}
+
+.proj:hover {
+    transition: scale(2);
+}
+
+
+@media only screen and (max-width: 900px) {
+    .page-content {
+        width: 90vw !important; 
+        margin: none !important; 
+    }
+
+    .info { 
+        margin: none !important;
+        padding: 0 !important;
+    }
+}
+
+@media only screen and (min-width: 1441px) {
+
+    .proj {
+        width: 28rem !important;
+    }
+}

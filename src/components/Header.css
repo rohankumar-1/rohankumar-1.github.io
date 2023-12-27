@@ -1,0 +1,40 @@
+
+html {
+    scroll-behavior: smooth;
+}
+
+.nav-brand {
+    font-size: 1.625rem !important;
+}
+
+.nav-container {
+    width: 100vw;
+    margin: auto;
+}
+ 
+.header-nav-logo {
+    width: 1.75rem;
+}
+
+.navLink {
+    text-decoration: none;
+    color: black;
+    font-size: 1.25rem;
+    transition: all 0.2s linear;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+ 
+.navLink:hover {
+    text-decoration: 2px #4EA5D9 underline;
+}
+ 
+@media only screen and (min-width: 1441px) { 
+    .nav-brand {
+       font-size: 1.625rem;
+    }
+    
+    .navLink {
+       font-size: 1.5rem;
+    }
+}

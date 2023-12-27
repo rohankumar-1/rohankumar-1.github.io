@@ -1,0 +1,15 @@
+
+#root {
+    padding: none !important;
+    margin: none !important;
+}
+
+body {
+    overflow: scroll;
+
+    * {
+        font-family: 'CMS', 'Droid Serif', Georgia, Times, serif;
+        font-weight: normal;
+        font-style: normal;
+    }
+}
