@@ -1,0 +1,49 @@
+
+* {
+    text-decoration: none !important;
+}
+
+.first {
+    height: 100%;
+    margin-bottom: 20%;
+}
+
+.name{
+    color: gray;
+}
+
+.picture {
+    height: 130px;
+    width: auto;
+}
+
+.icons {
+    margin-bottom: 16%;
+}
+
+.icon {
+    text-decoration: none;
+    color: black;
+    font-size: 2.2rem;
+    margin: 10px;
+}
+
+.bi-linkedin {
+    color: rgb(0, 73, 176) !important;
+}
+
+.more-info {
+    color: gray;
+    margin: auto;   
+}
+
+
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

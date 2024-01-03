@@ -1,0 +1,80 @@
+
+#CV {
+    position: absolute;
+    margin-top: -80px;
+}
+
+
+
+<div className="text-start">
+
+                <div id="CV"></div>
+
+                <h1>Curriculum Vitae</h1>
+                <p>
+                    A PDF version of this CV can be found <a href={resume}>here</a>.
+                </p>
+
+                <h4>Education</h4>
+                <ul>
+                    <li><b>B.S. in Computer Engineering, Boston University, Expected May 2025</b>
+                        <ul>
+                        <li>GPA: 3.96/4.00</li>
+                        <li>Relevant Coursework: Algorithms and Data Structures, Machine Learning, Deep Learning, Operating Systems</li>
+                        <li>Extracurriculars: Kappa Theta Pi Professional Technology Fraternity, intramural soccer, violin</li>
+                        </ul>
+                    </li>
+                    <li><b>Avon High School, 2017-2021</b>
+                        <ul>
+                        <li>GPA: 4.72/4.00</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h4>Experience</h4>
+                <ul>
+                    <li><b>Research Intern, MIT Sloan, May 2023 - Present</b>
+                        <ul>
+                        <li>Performing operations research under Prof. Dimitris Bertsimas, applying ML/AI and optimization in
+regards to AI in healthcare across 3 concurrent projects</li>
+                        <li>
+                            Redesigned data pipeline, improved accuracy of models (XGBoost, ANN, RF, Optimal Classification
+Trees) by over 10% in predicting patient readmission into a hospital system within 30 days of discharge</li>
+                        <li>
+                        Leveraged mixed-integer programming to optimize schedules for 10 physicians over fiscal quarters
+                        </li>
+                        </ul>
+                    </li>
+                    <li><b>Research Intern, Boston University, August 2023 - Present</b>
+                        <ul>
+                        <li>Conducting AI/ML research for cloud systems under Prof. Ayse Coskun, AI4CloudOps RedHat project</li>
+                        <li>Assisting graduate researchers with experiments regarding cluster deployment of PraxiBag, an AI tool
+for Python package software discovery in the cloud, discovering 500+ packages at a time</li>
+                        <li>Creating and iterating on system architecture of new tools for cloud operations based on
+Kubernetes/OpenShift environment</li>
+                        <li>
+                        Presenting experimental results, and pitching new opportunities on a weekly basis
+                        </li>
+                        </ul>
+                    </li>
+                    <li><b>Teaching Assistant, Boston University, Jan 2023 - Present</b>
+                        <ul>
+                            <li>
+                            Assisted Prof. Tali Moreshet, EC311 Logic Design with teaching Verilog solid RTL/HDL techniques
+                            </li>
+                            <li>
+                            Managed lab section, tutoring ~100 students debug Verilog code and logic circuits, graded homework
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h4>Skills</h4>
+                <ul>
+                    <li><b>Languages</b>: C/C++, Java, Python, SQL, MATLAB, Bash, PowerShell</li>
+                    <li><b>Techniques</b>: Optimization, Neural Networks (ANN, MLP, CNN), Decision Trees, Support Vector Machines, Regression</li>
+                    <li><b>Libraries</b>: PyTorch, XGBoost, Scikit-Learn, Gurobi, Numpy, Pandas, Matplotlib, Scipy</li>
+                    <li><b>Tools</b>: Git/Github/Gitlab, Linux, GDB, Conda, Docker</li>
+                </ul>
+            </div>
+        </div>

@@ -5,7 +5,7 @@ html {
 
 .nav-brand {
     font-size: 1.625rem !important;
-    color: rgb(197, 197, 197) !important;
+    color: rgb(238, 238, 238) !important;
 }
 
 .nav-container {
@@ -25,7 +25,7 @@ html {
 
 .navLink {
     text-decoration: none;
-    color: rgb(197, 197, 197);
+    color: rgb(238, 238, 238);
     font-size: 1.25rem;
     transition: all 0.2s linear;
     margin-right: 10px;
@@ -33,11 +33,11 @@ html {
 }
  
 .navLink:hover {
-    text-decoration: 2px #4EA5D9 underline;
+    text-decoration: 2px #ffffff underline;
 }
 
 .toggler {
-    color: rgb(197, 197, 197) !important;
+    color: rgb(238, 238, 238) !important;
 }
  
 @media only screen and (min-width: 1441px) { 
