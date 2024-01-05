@@ -14,9 +14,9 @@
 }
 
 .picture {
-    height: 140px;
+    height: 150px;
     width: auto;
-    border-radius: 40%;
+    border-radius: 100%;
 }
 
 .icons {
@@ -25,15 +25,31 @@
 
 .icon {
     text-decoration: none;
-    color: black;
-    font-size: 2.2rem;
+    font-size: 1.5rem;
     margin: 10px;
+    color: white;
+
+    padding-right: 9px;
+    padding-left: 9px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+
+    border-style: solid;
+    border-color: rgb(72, 72, 72);
+    border-width: 1.5px;
+    border-radius: 15px;
+
+    vertical-align: middle;
+    text-align: justify;
 }
 
-.bi-linkedin {
-    color: rgb(0, 73, 176) !important;
+.in-text {
+    font-size: 1.4rem;
 }
 
+.icon:hover {
+    color: rgb(220, 179, 247);
+}
 
 .info {
     display: flex;

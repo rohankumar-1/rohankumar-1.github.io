@@ -24,14 +24,15 @@ const About = () => {
                 Hello! I am an undergrad Computer Engineering major at Boston University (ENG). I'm currently doing research with MIT Sloan, under Prof. Dimitris Bertsimas, and with BU ENG, under Prof. Ayse Coskun. My current interest is in applied machine learning, particularly in cloud systems and healthcare.
             </p>
             <p className="text-start">
-                I hope to eventually attend graduate school, and continue research, but I plan venture into industry at some point in the future. Feel free to reach out at <a href="mailto: roku@bu.edu">roku@bu.edu</a>, or read my full <a href={resume}>resume</a>.
+                I hope to eventually attend graduate school, and continue research, but I plan venture into industry at some point in the future. Connect with me through any of the means below!
             </p>
 
             <div className="text-center icons">
                 <div>
                     <a href="https://github.com/rohankumar-1"><i className="icon bi bi-github"></i></a>
                     <a href="https://www.linkedin.com/in/rohan-kumar-in/"><i className="icon bi bi-linkedin"></i></a>
-                    <a href={resume}><i className="icon bi bi-file-person"></i></a>
+                    <a href="mailto: roku@bu.edu"><i class="icon bi bi-envelope-at-fill"></i></a>
+                    <a href={resume}><i className="icon bi bi-file-person"><span className="in-text"> CV</span></i></a>
                 </div>
             </div>
         </div>
