@@ -16,7 +16,7 @@ const Header = () => {
                         <Nav className="ms-auto">
                             <a className="navLink" href="/#about-me">About</a> 
                             <a className="navLink" href="/#projects">Projects</a>
-                            <a className="navLink" href="/blog">Blog</a>
+                            <Link className="navLink" to="/blog#">Blog</Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
