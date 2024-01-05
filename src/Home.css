@@ -33,7 +33,7 @@
 }
 
 .colorbar {
-    background-image: linear-gradient(rgb(0, 149, 255), white) !important;
+    background-image: linear-gradient(rgba(168, 19, 253, 0.573), white) !important;
     height: 5px !important;
 }
 

@@ -16,7 +16,8 @@ html {
 }
 
 .bar {
-    background-color: rgb(17, 14, 14) !important;
+    background-color: rgba(17, 14, 14, 0.95) !important;
+    backdrop-filter: blur(2px);
 }
  
 .header-nav-logo {
@@ -27,13 +28,13 @@ html {
     text-decoration: none;
     color: rgb(238, 238, 238);
     font-size: 1.25rem;
-    transition: all 0.2s linear;
+    transition: all linear;
     margin-right: 10px;
     margin-left: 10px;
 }
  
 .navLink:hover {
-    text-decoration: 2px #ffffff underline;
+    text-decoration: 2px purple overline !important;
 }
 
 .toggler {

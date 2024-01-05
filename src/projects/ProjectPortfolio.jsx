@@ -15,7 +15,7 @@ const ProjectPortfolio = () => {
             </div>
             <Card.Body>
                 <Card.Text className="proj-text">
-                    Used React.js and Node.js to write a simple portfolio webpage hosted on Github Pages. Currently viewing :)
+                    Used React.js and Node.js to write a simple portfolio webpage hosted on Github Pages. Also with hold blog posts. Currently viewing :)
                     <div className="d-flex justify-content-between align-items-center">
                         <Card.Link className="proj-link" href="https://github.com/rohankumar-1/rohankumar-1.github.io">Repository</Card.Link>
                         <div>

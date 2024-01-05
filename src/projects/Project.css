@@ -66,3 +66,8 @@
         width: 40px;
     }
 }
+
+hr {
+    color: purple !important;
+    border-width: 2px !important;
+}

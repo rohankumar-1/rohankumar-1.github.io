@@ -15,7 +15,7 @@ const ProjectGrad = () => {
             </div>
             <Card.Body>
                 <Card.Text className="proj-text">
-                    Inspired by Andrej Karpathy's micrograd, a functional neural network library from scratch. Automatic differentation for backprop, and modular NN architecture framework. Written in Python3 using numpy.
+                    Mostly just to prove to myself that I understand backpropogation and efficient differentiation. Inspired by Andrej Karpathy's micrograd, a functional neural network library from scratch. Automatic differentation for backprop, and modular NN architecture framework. Written in Python3 using numpy.
                     <div className="d-flex justify-content-between align-items-center">
                         <Card.Link className="proj-link" href="https://github.com/rohankumar-1/autograd">Repository</Card.Link>
                         <hr></hr>
