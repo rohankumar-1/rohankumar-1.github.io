@@ -54,6 +54,14 @@
         padding: 0 !important;
     }
 
+    .section-title {
+        width: 90vw !important;
+    }
+
+    .projectList {
+        width: 90vw !important;
+    }
+
     .more-info {
         visibility: hidden;
     }

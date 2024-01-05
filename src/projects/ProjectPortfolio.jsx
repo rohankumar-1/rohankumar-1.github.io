@@ -7,6 +7,9 @@ const ProjectPortfolio = () => {
     return (
         <Card className="proj">
             <Card.Title className="proj-title">Portfolio Site</Card.Title>
+            <div className="proj-date">Dec 2023 - Jan 2024</div>
+            <hr></hr>
+
             <div className="img-container">
                 <Card.Img className="proj-image" src={portfolioimg} variant="top"/>
             </div>

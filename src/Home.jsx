@@ -11,6 +11,7 @@ import ProjectPortfolio from './projects/ProjectPortfolio.jsx';
 import ProjectChess from './projects/ProjectChess.jsx';
 import ProjectFPGA from './projects/ProjectFPGA.jsx';
 import ProjectGrad from './projects/ProjectGrad.jsx';
+import ProjectCompress from './projects/ProjectCompress.jsx';
 
 // style sheet
 import "./Home.css";
@@ -28,6 +29,7 @@ const Home = () => {
                 <div id="projects"></div>
                 <h1 className="section-title">Projects</h1>
                 <div className="projectList">
+                    <ProjectCompress />
                     <ProjectPortfolio />
                     <ProjectGrad />
                     <ProjectFPGA />

@@ -7,6 +7,8 @@ const ProjectChess = () => {
     return (
         <Card className="proj">
             <Card.Title className="proj-title">SimpleChess App</Card.Title>
+            <div className="proj-date">April 2023 - May 2023</div>
+            <hr></hr>
             <div className="img-container">
                 <Card.Img className="proj-image" src={chessimg} variant="top"/>
             </div>
