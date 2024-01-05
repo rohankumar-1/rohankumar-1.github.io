@@ -18,11 +18,15 @@ import "./Home.css";
 const Home = () => {
     return (
         <div className="page-content">
-            <About />
-            <div className="text-start">
+            <div className="top-section">
+                <About />
+            </div>
 
+            <div className="colorbar"></div>
+
+            <div className="bottom-section text-start">
                 <div id="projects"></div>
-                <h1 className="head-title">Projects</h1>
+                <h1 className="section-title">Projects</h1>
                 <div className="projectList">
                     <ProjectPortfolio />
                     <ProjectGrad />

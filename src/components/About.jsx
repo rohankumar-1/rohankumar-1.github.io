@@ -21,7 +21,7 @@ const About = () => {
             </div>
 
             <p className="text-start">
-                Hello! I am an undergrad Computer Engineering major at Boston University (ENG). I'm currently doing research with MIT Sloan, under Prof. Dimitris Bertsimas, and with BU ENG, under Prof. Ayse Coskun. My current interest is in applied Machine Learning, particularly in cloud systems and healthcare.
+                Hello! I am an undergrad Computer Engineering major at Boston University (ENG). I'm currently doing research with MIT Sloan, under Prof. Dimitris Bertsimas, and with BU ENG, under Prof. Ayse Coskun. My current interest is in applied machine learning, particularly in cloud systems and healthcare.
             </p>
             <p className="text-start">
                 I hope to eventually attend graduate school, and continue research, but I plan venture into industry at some point in the future. Feel free to reach out at <a href="mailto: roku@bu.edu">roku@bu.edu</a>, or read my full <a href={resume}>resume</a>.

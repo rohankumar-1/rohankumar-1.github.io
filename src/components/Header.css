@@ -1,7 +1,7 @@
 
 html {
     scroll-behavior: smooth;
-}
+}   
 
 .nav-brand {
     font-size: 1.625rem !important;
@@ -9,14 +9,14 @@ html {
 }
 
 .nav-container {
-    color: white !important;
-    background-color: gray !important;
+    color: rgb(255, 255, 255) !important;
+    background-color: rgb(17, 14, 14) !important;
     width: 100vw;
     margin: auto;
 }
 
 .bar {
-    background-color: rgb(83, 83, 83) !important;
+    background-color: rgb(17, 14, 14) !important;
 }
  
 .header-nav-logo {
@@ -37,7 +37,11 @@ html {
 }
 
 .toggler {
-    color: rgb(238, 238, 238) !important;
+    color: rgb(255, 255, 255) !important;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
 }
  
 @media only screen and (min-width: 1441px) { 
