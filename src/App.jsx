@@ -4,7 +4,7 @@ import { SnackbarProvider } from "notistack";
 // layout and home
 import Layout from "./Layout";
 import Blog from "./blog/Blog";
-import Home from "./Home";
+import Home from "./components/Home";
 import Error from "./components/Error";
 
 import "./App.css";

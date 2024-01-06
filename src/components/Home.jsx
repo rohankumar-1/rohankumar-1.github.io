@@ -1,17 +1,14 @@
 import Card from 'react-bootstrap/Card';
 
 // components
-import About from "./components/About.jsx";
-
-// images
-import gradimg from "./assets/gradimg.png";
+import About from "./About.jsx";
 
 // projects
-import ProjectPortfolio from './projects/ProjectPortfolio.jsx';
-import ProjectChess from './projects/ProjectChess.jsx';
-import ProjectFPGA from './projects/ProjectFPGA.jsx';
-import ProjectGrad from './projects/ProjectGrad.jsx';
-import ProjectCompress from './projects/ProjectCompress.jsx';
+import ProjectPortfolio from '../projects/ProjectPortfolio.jsx';
+import ProjectChess from '../projects/ProjectChess.jsx';
+import ProjectFPGA from '../projects/ProjectFPGA.jsx';
+import ProjectGrad from '../projects/ProjectGrad.jsx';
+import ProjectCompress from '../projects/ProjectCompress.jsx';
 
 // style sheet
 import "./Home.css";
