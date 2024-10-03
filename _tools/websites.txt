@@ -1,3 +1,4 @@
 http://colah.github.io/rss.xml
 https://karpathy.github.io/feed.xml
 https://alexmolas.com/feed.xml
+https://geohot.github.io/blog/feed.xml

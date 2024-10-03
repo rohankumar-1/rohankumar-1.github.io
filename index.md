@@ -13,7 +13,7 @@ description: Hello, world, I'm Rohan, and this is my website, where you can find
 {% endfor %}
 
 <h1>Hello, I'm Rohan</h1>
-Hello, world, I'm Rohan, and this is my website, where you can find my information, as well as read some poorly written blog posts, if I don't get lazy.
+This is my website, where you can find my information, as well as read some poorly written blog posts, if I don't get lazy. In addition, you can find my projects and personal information, as well as a collection of [blogs I like](blogroll.html).
 
 You can find my resume [here](resume.pdf).
 
