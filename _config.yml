@@ -1,7 +1,7 @@
 title: Rohan Kumar Blog
 email: roku@bu.edu
 description: >- # this means to ignore newlines until "baseurl:"
-  Welcome to my personal blog! Here you'll find a glimpse into my life as a husband, father, and data scientist (in that order).
+  Welcome to my personal blog! This is a place to share my thoughts, projects, and personal information.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://rohankumar-1.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_link: #
@@ -29,7 +29,8 @@ feed:
   excerpt_only: true
   posts_limit: 500
   collections:
-    - recipes
+    - projects
+
 
 kramdown:
   hard_wrap: true
@@ -58,5 +59,5 @@ exclude:
     - venv
 
 collections:
-  recipes:
+  projects:
     output: true

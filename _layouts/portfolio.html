@@ -4,23 +4,45 @@ layout: default
 
 
 <!-- Home Content -->
-  <h1>Projects</h1>
-  {% assign currentYear = "" %}
-  {% for proj in site.projects %}
-    {% capture projYear %}{{ proj.date | date: "%Y" }}{% endcapture %}
-    {% if postYear != currentYear %}
-      {% if currentYear != "" %}
-        </ul>
-      {% endif %}
-      <h3>{{ postYear }}</h3>
-      <ul class="latest-posts">
-      {% assign currentYear = postYear %}
-    {% endif %}
-    <li>
-      <span class="post-date">{{ post.date | date: "%b %d" }}</span> · <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
-  {% endfor %}
-  {% if currentYear != "" %}
-    </ul>
-  {% endif %}
+	<h1>Projects</h1>
+	<p>I've worked on several academic/personal projects throughout my undergraduate career.  </p>
+	{% assign currentYear = "" %}
+	{% assign numProj = false %}
+	{% for proj in site.projects %}
+		{% capture projYear %}{{ proj.date | date: "%Y" }}{% endcapture %}
+		{% if projYear != currentYear %}
+			{% if currentYear != "" %}
+				</div>
+			{% endif %}
+			<center><h2 class="hr-proj-year line one-line">{{ projYear }}</h2></center>
+			<div class="latest-projs">
+			{% assign currentYear = projYear %}
+		{% endif %}
+		
+		{% if numProj == true %}
+			<img src="docs/ellipsis.svg" style="margin:auto; display:block; width:70px; height:50px;">
+		{% endif %}
+		{% assign numProj = true %}
+
+		<div class="proj-card">
+			<span class="proj-title">{{proj.title}}</span>
+			<br>
+			<span class="post-date">{{ proj.date | date: "%B" }}</span>
+			<br>
+			<img class="proj-img" src="{{ proj.header-img }}">
+			<br>
+			{{proj.description}} 
+			<a class="post-date" href="{{ proj.url }}">[github]</a>
+			<br>
+			<div class="tag-list">
+				{% for tag in proj.tags %}
+					<div class="tag">{{ tag }}</div>
+				{% endfor %}
+			</div>
+		</div>
+
+	{% endfor %}
+	{% if currentYear != "" %}
+		</div>
+	{% endif %}
 

@@ -25,7 +25,9 @@ def modify_image_syntax(content):
 
 
 # Specify the folder path where your Markdown files are located
-folder_path = "_posts"
+post_path = "_posts"
+proj_path = "_projects"
 
 # Process the Markdown files in the folder
-process_md_files(folder_path)
+process_md_files(post_path)
+process_md_files(proj_path)
