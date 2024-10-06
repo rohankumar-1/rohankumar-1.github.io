@@ -1,0 +1,30 @@
+/**
+
+Each tag has some value, and from here we can add new tag colors
+
+*/
+
+.tag[tag="python"] {
+    color:green;
+    background-color: lightgreen;
+}
+
+.tag[tag="machine-learning"] {
+    color:blue;
+    background-color: lightblue;
+}
+
+.tag[tag="verilog"] {
+    color:grey;
+    background-color: gainsboro;
+}
+
+.tag[tag="FPGA"] {
+    color:rgb(146, 146, 41);
+    background-color: rgb(255, 255, 197);
+}
+
+.tag[tag="VGA"] {
+    color:coral;
+    background-color: rgb(255, 213, 213);
+}

@@ -60,4 +60,6 @@ exclude:
 
 collections:
   projects:
-    output: true
+    output: false
+    sort_by: title
+

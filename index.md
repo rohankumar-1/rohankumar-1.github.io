@@ -12,7 +12,7 @@ description: Hello, world, I'm Rohan, and this is my website, where you can find
   {% assign totalWords = totalWords | plus: postWords %}
 {% endfor %}
 
-<h1>Hello, I'm Rohan</h1>
+<h1>Hello, I'm Rohan Kumar</h1>
 This is my website, where you can find my information, as well as read some poorly written blog posts, if I don't get lazy. In addition, you can find my projects and personal information, as well as a collection of [blogs I like](blogroll.html).
 
 Feel free to contact me at my [personal](mailto:roku0811@gmail.com) or [school](mailto:roku@bu.edu) email for any opportunities for internships, research, or just to connect.

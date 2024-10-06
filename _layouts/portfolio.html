@@ -7,7 +7,9 @@ layout: default
 	<h1>Projects</h1>
 	<p>I've worked on several academic/personal projects throughout my undergraduate career.  </p>
 	{% assign currentYear = "" %}
+
 	{% assign numProj = false %}
+
 	{% for proj in site.projects %}
 		{% capture projYear %}{{ proj.date | date: "%Y" }}{% endcapture %}
 		{% if projYear != currentYear %}
@@ -16,6 +18,7 @@ layout: default
 			{% endif %}
 			<center><h2 class="hr-proj-year line one-line">{{ projYear }}</h2></center>
 			<div class="latest-projs">
+			{% assign numProj = false %}
 			{% assign currentYear = projYear %}
 		{% endif %}
 		
@@ -32,11 +35,13 @@ layout: default
 			<img class="proj-img" src="{{ proj.header-img }}">
 			<br>
 			{{proj.description}} 
-			<a class="post-date" href="{{ proj.url }}">[github]</a>
+			{% if proj.url != "" %}
+				<a class="post-date" href="{{ proj.url }}">[github]</a>
+			{% endif %}
 			<br>
 			<div class="tag-list">
 				{% for tag in proj.tags %}
-					<div class="tag">{{ tag }}</div>
+					<div class="tag" tag="{{tag}}">{{ tag }}</div>
 				{% endfor %}
 			</div>
 		</div>
