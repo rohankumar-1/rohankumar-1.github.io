@@ -13,6 +13,10 @@ buymeacoffee_link: #
 plugins:
   - jekyll-feed
   - jekyll-toc
+  - jekyll-mermaid
+
+mermaid:
+  src: "scripts/mermaid.min.js"
 
 toc:
   min_level: 1
