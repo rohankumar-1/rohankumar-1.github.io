@@ -1,0 +1,13 @@
+
+
+
+# Human Reasoning
+
+
+### How LLMs work
+
+An LLM takes some input, and tries to produce the most probable next token. From some input $x_t$ at time $t$, the output is the token $x_{t+1}$. This is dependent on the parameters $\theta$, which encode information. 
+
+### How humans work
+
+Humans do not necessarily generate the next token. Instead, we have the ability to introspect. After we have "generated" some sentence, we have the ability to retrospectively change things. 
